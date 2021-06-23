@@ -28,13 +28,13 @@ def height(open_file, operand: str):
     for i in open_file.readlines():
         if result:
             if operand == '>':
-                if i.split(';')[4] > result[4]:
-                    result = i.split(';')
+                if i.strip().split(';')[4] > result[4]:
+                    result = i.strip().split(';')
             elif operand == '<':
-                if i.split(';')[4] < result[4]:
-                    result = i.split(';')
+                if i.strip().split(';')[4] < result[4]:
+                    result = i.strip().split(';')
         else:
-            result = i.split(';')
+            result = i.strip().split(';')
     return result
 
 
@@ -50,13 +50,13 @@ def weight(open_file, operand: str):
     for i in open_file.readlines():
         if result:
             if operand == '>':
-                if i.split(';')[5] > result[5]:
-                    result = i.split(';')
+                if i.strip().split(';')[5] > result[5]:
+                    result = i.strip().split(';')
             elif operand == '<':
-                if i.split(';')[5] < result[5]:
-                    result = i.split(';')
+                if i.strip().split(';')[5] < result[5]:
+                    result = i.strip().split(';')
         else:
-            result = i.split(';')
+            result = i.strip().split(';')
     return result
 
 
